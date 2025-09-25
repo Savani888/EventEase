@@ -1,0 +1,14 @@
+@code {
+    [Parameter] public string EventTitle { get; set; }
+    [Parameter] public string EventDate { get; set; }
+    [Parameter] public string Location { get; set; }
+
+    private string userNote;
+}
+
+<div class="event-card">
+    <h3>@EventTitle</h3>
+    <p>Date: @EventDate</p>
+    <p>Location: @Location</p>
+    <input placeholder="Add note..." @bind="userNote" />
+</div>
